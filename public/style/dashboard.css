@@ -1,0 +1,11 @@
+.contain{
+	background: #282828;
+	height: 100px;
+}
+li a{
+	margin-top: 20px;
+	color: white;
+}
+li a:hover{
+	color: black;
+}

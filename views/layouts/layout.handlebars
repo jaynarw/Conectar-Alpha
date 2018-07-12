@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel=stylesheet href="/thank-you/stylerender.css">
+<link rel="shortcut icon" type="image/jpg" href="../images/logo.jpg">
+  <title>Conectar</title>
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<div id=all>
+            <section class=canvas-wrap>
+                <div id=canvas class=gradient>
+                </div>
+            </section>
+  <div class="container" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),none;">
+      <div class="header clearfix">
+        <nav>
+        <img src="../images/logo.jpg" style="width: 50px;height: 50px;margin-left: 2%;">
+          <ul class="nav nav-pills pull-right">
+            {{#if user}}
+              <li role="presentation"><a href="/" style="font-weight: bold;color: white;">Dashboard</a></li>
+              <li role="presentation"><a href="/users/logout" style="font-weight: bold;color: white;">Logout</a></li>
+            {{else}}
+              <li role="presentation"><a href="/users/login" style="font-weight: bold;color: white;">Login</a></li>
+              <li role="presentation"><a href="/users/register" style="font-weight: bold;color: white;">Register</a></li>
+            {{/if}}
+          </ul>
+        </nav>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-12">
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+          
+          {{{body}}}
+        </div>
+
+        
+      </div>
+
+
+    </div> <!-- /container -->
+  </div>
+  <script defer src="/thank-you/js/vue.js_%3b%20filename_%3dutf-8%27%20%27vue14a9.js?v=93a67750"></script>
+            <script defer src="/thank-you/js/locales.js_%3b%20filename_%3dutf-8%27%20%27localese0e5.js?v=f3cb31d0"></script>
+            <script defer src="/thank-you/js/vuelib.js_%3b%20filename_%3dutf-8%27%20%27vuelib3e9d.js?v=0dee75cb"></script>
+            <script defer src="/thank-you/js/app.js_%3b%20filename_%3dutf-8%27%20%27app3f8f.js?v=81e9c36d"></script>
+            <script defer src="/thank-you/js/three.min.js_%3b%20filename_%3dutf-8%27%20%27three.minb93e.js?v=dc74fdfe"></script>
+            <script defer src="/thank-you/js/projector.js_%3b%20filename_%3dutf-8%27%20%27projector16d6.js?v=d89561ab"></script>
+            <script defer src="/thank-you/js/canvas-renderer.js_%3b%20filename_%3dutf-8%27%20%27canvas-rendererea65.js?v=305dbc77"></script>
+            <script defer src="/thank-you/js/3d-lines-animation.js_%3b%20filename_%3dutf-8%27%20%273d-lines-animatione5ae.js?v=6381bba1"></script>
+            <script defer src="/thank-you/js/jquery.1.7.1.min.js_%3b%20filename_%3dutf-8%27%20%27jquery.1.7.1.min2ab5.js?v=4bab8348" type=text/javascript></script>
+            <script defer src="/thank-you/js/color.js_%3b%20filename_%3dutf-8%27%20%27colore54d.js?v=df32711b"></script>
+            <script>
+                var script = document.createElement('script')
+                script.setAttribute('async', 'true')
+                script.src = 'http://www.googletagmanager.com/gtag/js?id=UA-108623857-2'
+                document.head.appendChild(script)
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-108623857-2');
+            </script>
+</body>
+</html>

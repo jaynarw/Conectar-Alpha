@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title id="title">Conectar - A place to share knowledge.</title>
+	<link rel="shortcut icon" type="image/png" href="images/logo.jpg">
+	<link rel="stylesheet" type="text/css" href="style/styling.css">
+	{{!-- <link rel="stylesheet" type="text/css" href="style/style.css"> --}}
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/search.js"></script>
+	<script src="js/dashboard.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	    <script src="/js/scrollspy.js"></script>
+    <script src="/js/jquery.sticky.js"></script>
+	 
+	  
+	 
+	  <script src="/lib/angular-1.6.10/angular.js"></script>
+	  <script src="/js/appAngular.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+			<script>
+		$(document).on( 'scroll', function(){
+			// console.log("This");
+			if($(document).scrollTop()>($('.profile-pic').offset().top-$('.nav-header').height()+$('.profile-pic').height()))
+			{
+				$('.left-profile-about').addClass("isSticky");
+				// $('.left-profile-about').addClass("isSticky");
+				// $('.left-profile-about').addClass("isSticky");
+			}
+			else
+			{
+				$('.left-profile-about').removeClass('isSticky');
+			}
+		
+		});
+	</script>
+	<script>// Get the modal
+	$(document).ready(function(){
+var modal = document.getElementById('myModal');
+var modal=$('#myModal');
+var btn=$('#myBtn');
+// Get the button that opens the modal
+
+// Get the <span> element that closes the modal
+var span = $(".close");
+
+// When the user clicks on the button, open the modal 
+btn.click( function() {
+    modal.css( 'display',"block");
+});
+
+// When the user clicks on <span> (x), close the modal
+span.click( function() {
+    modal.css( 'display',"none");
+});});
+
+// When the user clicks anywhere outside of the modal, close it
+</script>
+	<script>
+		$(document).ready(function(){
+			$("#tagsbtn").click(function(){
+		    $("#tags").slideToggle();
+		    $("#friends").slideUp();
+			});
+			$("#friendsbtn").click(function(){
+		    $("#tags").slideUp();
+		    $("#friends").slideToggle();
+			});
+		});
+	</script>
+</head>
+<body class="vbox" id="body1" ng-app="myApp" ng-controller="mainController">
+<header class="nav-header">
+	<div class="container">
+		<a href="/"><img src="/images/logo.jpg" width="40px" height="40px" style="position: fixed;top:3px;left:calc(50% - 20px);"></a>
+	<div class="nav">
+		<div class="home-nav">
+		<a href="/"><span class="hint--bottom hint--rounded " aria-label="Home"><i class="material-icons">home</i></span></a>
+		</div>
+			<div class="notification-nav">
+		<span class="hint--bottom hint--rounded " aria-label="You have no unread notifications."><i class="material-icons">notifications_none</i></span>
+	</div>
+	<div class="friend-nav">
+		<span class="hint--bottom hint--rounded " aria-label="Friend Requests"><i class="material-icons">people_outline</i></span>
+	</div>
+	<a href="/chat">
+	<div class="chat-nav">
+			<span class="hint--bottom hint--rounded " aria-label="Chat"><i class="material-icons">chat</i></span></a>
+	</div>
+
+	</div>
+	<div class="profile-input">
+		<div class="search">
+			<form class="search-form" action="/user" method="get">
+				<input type="search" id="search-input" name="searchinput" placeholder="Search by Username" />
+				<span class="search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#7289DA"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg></span>
+			</form>
+			<div class="header-profile">
+				<img src="/images/avatar.png" width="32px" height="32px" style="cursor:pointer;border-radius: 3px;">
+			</div>
+		</div>
+	</div>
+</div>
+</header>
+	<div class="container-main" style="min-height:650px">
+		<div class="left-profile-about" >
+		<div class="profile-card">
+			<img src="/images/avatar.png" class="card-img" width="32px" height="32px" style="border-radius: 3px;"/>		
+			<div class="card-username">{{username}}</div>
+		</div>
+		<div class="profile-pic"><img src="images/avatar.png" width="230px" height="230px"></div>
+		<div class="profile-name">{{name}}</div>
+		<div class="profile-username">{{username}}</div>
+		<div class="about-profile-text">{{user_about}}</div>
+		<div class="about-profile-text"><svg width="18" height="18">       
+     <image xlink:href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/location.svg" src="yourfallback.png" width="18" height="18"/>    
+</svg><span class="about-text">{{cc}}</span></div>
+<div class="about-profile-text"><div><svg width="18" height="18">       
+     <image xlink:href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/mail.svg" src="yourfallback.png" width="18" height="18"/>    
+</svg><span class="about-text">{{mail}}</span></div><svg width="18" height="18">       
+     <image xlink:href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/link.svg" src="yourfallback.png" width="18" height="18"/>    
+</svg><span class="about-text">{{phone}}</span></div>
+		<button id="myBtn" class="btn" style="width:80%">Edit Details</button>
+		<div class="col-md-3">
+				<div class="col-md-12" style="margin-top: 15px;padding:0">
+				<button class="btn btn-danger" id="tagsbtn" style="width: 80%;">Your Interests</button>
+				</div>
+				<div class="col-md-12" id="tags" style="display: none;padding:0">
+					<ul class="list-group lol">
+						<li class="list-group-item" ng-repeat="x in tags">-- [[x]]</li>
+						<li class="list-group-item"><button class="btn btn-primary" style="width: 80%;display:block" data-toggle="modal" data-target="#insert" onclick="window.location.href='/tag'">Add More</button></li>
+						<li class="list-group-item"><button class="btn btn-danger" style="width: 80%;display:block" data-toggle="modal" data-target="#delete">Delete</button></li>
+					</ul>
+				</div>
+				<div class="col-md-12" style="margin-top: 15px;padding:0">
+				<button class="btn btn-danger" id="friendsbtn" style="width: 80%;float:left;">Your Friends</button>
+				</div>
+				<div class="col-md-12" id="friends" style="display: none;">
+					<ul class="list-group" style="margin-top:40px;">
+						<li class="list-group-item">{{f1}}</li>
+						<li class="list-group-item">{{f2}}</li>
+						<li class="list-group-item">{{f3}}</li>
+						<li class="list-group-item">{{f4}}</li>
+						<li class="list-group-item">{{f5}}</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+
+
+						<form action="/search" method="post">
+						<div class="main-search-container"><input type="search" class="main-bar" name="searchbar" id="searchbar" placeholder="Search the Topics you want to learn." autocomplete="off" aria-label="Search">
+						<span class="search-icon-main"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#7289DA"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg></span></div>
+</form>
+							{{#if searchresults}}
+							{{searchfor}}
+			{{#each searchresults}}
+        <li>{{this.username}}</li>
+        {{#if this.about}}<li>{{this.about}}</li>{{/if}}
+{{/each}}
+{{/if}}
+						
+			{{!-- <div class="col-md-6" style="margin-top: 15px;">
+				<div class="col-md-12">
+					<table class="table">
+						<form id="searchForm" ng-submit="search('web')">
+							<tr>
+								<td>[[people]]</td>
+								<td><input class="form-control" type="text" name="movie" style="width: 100%; border-radius:10px;" id="searchMovie" placeholder="Search Fields Of Your Interest..."></td>
+								<td style="width: 10px;"><button type="submit" class="btn" style="background:white;color: #3498DB;border-radius: 10px;" id="listen"><i class="fas fa-microphone" style="font-size: 1.8em;"></i></button></td>
+							</tr>
+						</form>
+					</table>
+					<div class="container-fluid">
+						<div id="movies" class="row">
+							<!--here all the movies are displayed-->
+						</div>
+					</div>
+				</div>
+			</div> --}}
+			
+
+			
+			<div style="float:right;width:75%;padding-top:40px">
+			<style>
+						#ai{
+							margin-top: 5px;
+						}
+					</style>
+					<div class="col-md-12">
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Web Development" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="App Development" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Game Development" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Blockchain Development" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Parallel Computing" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Concurrency" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Distributed Computing" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Relational Databases" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Computer Graphics" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Image Processing" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Robotics" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Data Mining" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Information visulization" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Cryptography" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Networking" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Computer Security" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Computer Architecture" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Computer Operating systems" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Computer Vision" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Machine Learning" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Natural language proceesing" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Artificial intelligence" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="ai" value="Automated Reasoning" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+						<div class="col-md-4">
+						<form action="/tagsearch" method="post">
+						<input type="submit" class="btn" name="tag" id="eh" value="Ethical Hacking" style="width: 100%;height: 100%; border-radius: 5px;background: #D6EAF8;color: #7289DA;">
+						</form>
+						</div>
+					</div>
+				</div>
+		
+	</div>
+	
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h4>Edit Details</h4>
+			        
+			        
+						
+							
+						    <form action="/update" method="post">
+						        <div>
+						            <label for="phone">Phone Number:</label>
+						            <input type="text" id="phone" name="phone">
+						        </div>
+						        <div>
+						            <label for="mail">Mail:</label>
+						            <input type="text" id="mail" name="mail">
+						        </div>
+						        <div>
+						            <label for="designation">Designation:</label>
+						            <input type="text" id="designation" name="designation">
+						        </div>
+								<div>
+						            <label for="user_about">About:</label>
+									<input type="text" id="user_about" name="user_about"></div>
+						        
+						        <div>
+						            <label for="cc">College/Company:</label>
+						            <input type="text" id="cc" name="cc"></div>
+						        <div>
+						        		<button type="submit" class="btn btn-primary">SUBMIT</button></div>
+						        </form>
+								</div>
+						
+
+</div>
+
+	<div class="container">
+<footer class="footer hbox" style="position:relative;border-top: 1px #e1e4e8 solid !important;">
+	<div class="container-footer" style="flex:1"><a style="margin-left:100px" href="/team">Team</a> <a href="/contact">Contact Conectar</a></div>
+	<div class="container-footer" style="flex:1">
+© 2018 Conectar, Inc.</div><div class="container-footer" style="display:inline-block;flex:1"><a href="/about" style="margin-right:16px;">About us</a> <a href="/tag">Explore</a></div>
+	
+</footer>
+</div>
+{{!-- <footer id="myFooter" style="margin-top: 20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 myCols">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="/tag">Explore</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 myCols">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="/about">About Conectar</a></li>
+                        <li><a href="/contact">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 myCols">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2018 Copyright Text </p>
+        </div>
+    </footer> --}}
+	<script>
+		var vol = 0;
+		const wage = document.getElementById('body1');
+		wage.addEventListener('keydown', (e) => {
+		    if (e.key === 'Enter') {
+		        vol = 20;
+		        console.log('enter');
+		        speak('Hello {{username}} thank you very much for calling me ',vol);
+		        speak('go on let your curiosity guide you...',vol);
+		    }
+		});
+	</script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+		function speak(text1,v) {
+			var msg = new SpeechSynthesisUtterance();
+			var voices = window.speechSynthesis.getVoices()
+			console.log(voices);
+			msg.volume = v;
+			msg.rate = 1.3;
+			msg.pitch = 10;
+			msg.text = text1;
+			window.speechSynthesis.speak(msg);
+		};
+		speak('Congratulations,Now its time for me to fulfill , the promise i made to you',20);
+		speak('my name is jacob your first ever friend you made on conectar platform',30);
+		speak('I will help you navigate through the platform',20);
+		speak('you can call me by pressing Enter',20);
+	var record = document.getElementById('searchMovie')
+	function startConverting(){
+		speak('Hello There,Speak to Search Your Interests!!',20);
+		if ('webkitSpeechRecognition' in window){
+			var speechRecognizer = new webkitSpeechRecognition();
+			speechRecognizer.continous = true;
+			speechRecognizer.interimResults = true;
+			speechRecognizer.lang  = 'en-IN';
+			speechRecognizer.start();
+			var finaltranscripts = '';
+			var x = 0;
+			speechRecognizer.onresult = function (event) {
+				var interimTranscripts = '';
+				for(var i = event.resultIndex; i < event.results.length;i++){
+					var transcript = event.results[i][0].transcript;
+					if(event.results[i].isFinal){
+						finaltranscripts += transcript
+					}
+				}
+				record.innerHTML = finaltranscripts;
+				console.log(finaltranscripts);
+				getMovies(finaltranscripts);
+				x++;
+				if(x==3){
+					speak("Thank you for using me",20);
+					speak("I hope You Will Love My Content",20);
+				}
+				};
+		speechRecognizer.onerror = function(event){
+			console.log('Error detected');
+		};
+	}else{
+		record.innerHTML = 'Your Browser is not supported....'
+	}
+}
+	</script>
+	<script>
+		$(document).ready(() => {
+		  $('#searchForm').on('submit', (e) => {
+		    let searchText = $('#searchMovie').val();
+		    getMovies(searchText);
+		    e.preventDefault();
+		  });
+		});
+	</script>
+</body>
+</html>

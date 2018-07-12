@@ -1,0 +1,255 @@
+body {
+    font-family: Helvetica,Arial,'PingFang SC','Hiragino Sans GB','Source Han Sans CN',Roboto,'Heiti SC','Microsoft Yahei',sans-serif;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0
+}
+
+#all {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%
+}
+
+#content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center
+}
+
+#main {
+    overflow-x: visible;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 553px;
+    padding-left: 26px
+}
+
+.canvas-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.img-head {
+    margin-top: 48px;
+    margin-left: -24px
+}
+
+.img-head img {
+    width: 100%
+}
+
+.words {
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.4;
+    width: 800px;
+    margin-top: 12px;
+    color: #fff
+}
+
+.thank-you {
+    font-size: 18px;
+    font-weight: 300;
+    display: none;
+    margin-top: 12px;
+    color: #eee
+}
+
+.button-out {
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 36px;
+    padding-right: 28px;
+    justify-content: flex-start
+}
+
+.button {
+    font-size: 18px;
+    padding: 12px 36px;
+    cursor: pointer;
+    transition: all ease .2s;
+    color: #fff;
+    border: none;
+    /*border: 1px solid #ccc;*/
+    border-radius: 4px;
+    outline: 0;
+    background-color: #ff4e50
+}
+
+/*.button:hover {
+    background-color: #ff3437
+}
+
+.button:active {
+    background-color: #ff4e50
+}*/
+.button-mormal {
+    display: block;
+    margin-right: 36px;
+    background-color: #5c5c5c
+}
+
+.button-mormal:hover {
+    background-color: #4f4f4f
+}
+
+.button-mormal:active {
+    background-color: #5c5c5c
+}
+
+.button-ok {
+    display: flex;
+    align-items: center
+}
+
+.button-ok img {
+    margin-right: 6px
+}
+
+.copyright {
+    font-size: 13px;
+    font-weight: 300;
+    bottom: 10px;
+    color: #eaeaea
+}
+
+.detail {
+    margin-top: 36px
+}
+
+.link {
+    font-size: 13px;
+    transition: all ease .2s;
+    color: #ddd
+}
+
+.link:hover {
+    color: #ccc
+}
+
+.link:active {
+    color: #ddd
+}
+
+.link-1 {
+    margin-right: 36px
+}
+
+.other {
+    margin-top: 24px
+}
+
+.other img {
+    width: 24px;
+    margin-right: 24px;
+    transition: all ease .2s;
+    opacity: .6
+}
+
+.other img:hover {
+    opacity: 1
+}
+
+.about {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin: 25px 0 10px 0;
+    font-size: 16px;
+}
+
+.button-start {
+    line-height: 24px;
+    font-weight: 600;
+    color: #fff;
+    font-weight: 400;
+    margin: 12 0 0 0;
+    background-color: #529ecc;
+    display: block;
+    width: 240px;
+    height: 24px;
+    font-size: 16px;
+    text-align: center;
+    /* margin: 10px 0 0; */
+    padding: 8 16px;
+    outline: 0;
+    outline-style: none;
+    outline-width: 0;
+    outline-color: transparent;
+    /* background-color: transparent; */
+    /* border: 1px solid #fff; */
+    border-radius: 2px;
+}
+
+.button-login {
+    line-height: 24px;
+    font-weight: 600;
+    color: #444;
+    font-weight: 400;
+    display: inline-block;
+    width: 238px;
+    text-align: center;
+    font-size: 16px;
+    height: 24px;
+    margin: 10px 0 0;
+    padding: 8 16px;
+    background-color: white;
+    border: 1px solid #fff;
+    border-radius: 2px;
+}
+
+.login-box {
+    position: relative;
+    width: 650px;
+    padding-right: 50%;
+    padding-left: 50%;
+    margin-top: 40px;
+}
+
+input {
+    display: block;
+    width: 272px;
+    padding: 11px 10px 11px 13px;
+    margin: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    /* display: inline-block; */
+    text-align: start;
+    /* margin: 0em; */
+    font: 400 13.3333px Helvetica;
+}
+
+#signup_email {
+    
+}
+
+#signup_password {
+    
+}
+
+#signup_username {
+    
+}

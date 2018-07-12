@@ -1,0 +1,267 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <title>{{username}}</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style3.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/hint.css"/>
+        <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/perfect-scrollbar.jquery.js"></script>
+    <link href="/css/perfect-scrollbar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script src="/lib/angular-1.6.10/angular.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+<!-- <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/js/app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var $margini = $('.tab i').css("margin-left");
+        // alert($margini+' auto');
+        $('.tab i').css("margin",'auto '+$margini);
+      $('.message-box').perfectScrollbar();
+      $('.mention-panel').perfectScrollbar();
+      // $('.bottom').perfectScrollbar();
+    });
+    </script>
+  </head>
+
+  <body ng-controller="mainController" ng-init='submituser("Jayesh");' class="main-container vbox">
+    
+      <div class="header hbox" ng-class="{'leftpanel':panelToggle}">
+        <div class="logo" ng-class="{'active':panelToggle===true}">
+          <div class="logo-app" ng-if="panelToggle"><i class="material-icons md-light md-48 active">timeline</i></div>
+          <div class='navigation-icon' ng-click="panelToggle=(!panelToggle);">
+          <i class="material-icons md-light md-24" ng-if="!panelToggle">arrow_forward</i>
+          <i class="material-icons md-light md-24 panel-toggled active" ng-if="panelToggle">arrow_back</i></div>
+          <!-- <img src="/img/logo5.png"> -->
+        </div>
+        <div class="chat-title_wrapper hbox">
+        <div class="title-container">  
+          <img src="/img/avatar.png" width="40px" height="40px" class="avatar-img-main">
+          <div class="chat-title">Sudhanshu</div>
+        </div>
+          <div class="profile-buttons">
+          <div class="favorite-button"><i class="material-icons md-dark md-inactive hint--rounded hint--small hint--bottom" ng-class="{'favorite':favorite}" aria-label="Favourite Sudhanshu" ng-click="loveit()" ng-model="love">star_border</i></div>
+          <div class="mention-button"><i class="material-icons md-dark md-inactive hint--rounded hint--small hint--bottom" ng-class='{"active":rightpanelToggle}' aria-label="See Mentions" ng-click="rightpanelToggle=!rightpanelToggle">alternate_email</i></div>
+          <div class="avatar-button"><img src="/img/avatar.png" width="35px" height="35px" class="avatar-img-main"></div>
+        </div>
+      </div>
+        </div>
+
+      <div class="container-chat hbox" ng-class="{'rightpanel':rightpanelToggle, 'leftpanel':panelToggle===true}">
+        <div class="mention-panel" ng-class="{'active':rightpanelToggle}">
+          <div class="wrapper_" ng-if="rightpanelToggle">
+          <div class="items-result">
+              <div class="items-result-text">3 Results</div>
+          </div>
+          <div class="chatname-result">
+              <div class="chatname-result-text">#Sudhanshu</div>
+              <div class="divider"></div>
+          </div>
+          <div class="mentions_wrapper">
+            
+            <div class="message">
+                <div class="chat-model">
+                <span class="hint--top hint--rounded hint--small aside" aria-label="{[{x.name}]}"><img src="/img/avatar.png" width="30px" height="30px" class="avatar-img">
+                </span><div class="chat-items">
+                  <div class="chat-items-details">Jayesh</div>
+                  <div class="message-text">This was mentioned <span class="mention-chat">@Jayesh</span></div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="mentions_wrapper">
+            <div class="message">
+                <div class="chat-model">
+                <span class="hint--top hint--rounded hint--small aside" aria-label="{[{x.name}]}"><img src="/img/avatar.png" width="30px" height="30px" class="avatar-img">
+                </span><div class="chat-items">
+                  <div class="chat-items-details">Sudhanshu</div>
+                  <div class="message-text">Apart above <code>@import</code> <span class="mention-chat">@Jayesh</span> hid placidly</div>
+              </div>
+            </div>
+            </div>
+          </div>
+            <div class="mentions_wrapper">
+            <div class="message">
+                <div class="chat-model">
+                <span class="hint--top hint--rounded hint--small aside" aria-label="{[{x.name}]}"><img src="/img/avatar.png" width="30px" height="30px" class="avatar-img">
+                </span><div class="chat-items">
+                  <div class="chat-items-details">Sudhanshu</div>
+                  <div class="message-text">Said more<code class="block">pre{
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  margin-bottom: 10px;
+  overflow: auto;
+  width: auto;
+  padding: 5px;
+  background-color: #eee;
+  width: 650px!ie7;
+  padding-bottom: 20px!ie7;
+  max-height: 600px;
+}</code>
+        oh hello that animatedly absolutely crane <span class="mention-chat">@Jayesh</span> wow goodness.</div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- <div class="left-panel vbox" ng-class="{'active':panelToggle===true}"> -->
+          <!-- <div class="panel-icons"> -->
+
+            <!-- <div class="container-icons-panel" ng-class="{'vbox':panelToggle===false} {'hbox':panelToggle===true}"></div> -->
+          <!-- </div> -->
+        
+        <!-- <div class="empty-icons" ></div> -->
+        <!-- <div class="icon-container-recent"><div class="panel-icons-icon recent">a</div></div>
+            <div class="icon-container-groups"><div class="panel-icons-icon groups">b</div></div>
+            <div class="icon-container-room"><div class="panel-icons-icon room">c</div></div>
+        </div> -->
+        <!-- changed left-panel-->
+
+
+
+        <div class="left-panel hbox" ng-class="{'active':panelToggle===true}">
+          <ul class="navigation-tabs vbox">
+            <li class="tab conversation" ng-click="tab='chat';panelToggle?panelToggle:(panelToggle=(!panelToggle));">
+              <i class="material-icons md-light md-24 {[{tab==='chat'?'active':''}]}" >chat</i>
+            </li>
+            <li class="tab search" ng-click="tab='search';panelToggle?panelToggle:(panelToggle=(!panelToggle));">
+              <i class="material-icons md-light md-24" ng-class="{'active':tab==='search'}">search</i>
+            </li>
+            <li class="tab group" ng-click="tab='groups';panelToggle?panelToggle:(panelToggle=(!panelToggle));">
+              <i class="material-icons md-light md-24" ng-class="{'active':tab==='groups'}">people_outline</i>
+            </li>
+            <li class="tab room" ng-click="tab='one-one';panelToggle?panelToggle:(panelToggle=(!panelToggle));" >
+              <i class="material-icons md-light md-24" ng-class="{'active':tab==='one-one'}">person</i>
+            </li>
+            <li class="tab empty" ></li>
+          </ul>
+          <div class="left-panel-content" ></div>
+        </div>
+
+
+         
+        <div class="content vbox">
+          <div class="message-box" id="message-box" ng-init='submit("group");prevUser=""' schroll-bottom="messages">
+            
+            <div class="message-container" ng-repeat="x in messages" >
+              <div class="message">
+                <div class="chat-model">
+                <span class="hint--top hint--rounded hint--small aside" aria-label="{[{x.name}]}"><img src="/img/avatar.png" width="30px" height="30px" class="avatar-img">
+                </span><div class="chat-items">
+                  <div class="chat-items-details">{[{x.name}]}</div><span><div class="hint--top hint--rounded chat-time" aria-label="{[{x.date+' '+x.time}]}">{[{x.time.split(' ')[0].split(':')[0]+':'+x.time.split(' ')[0].split(':')[1]+' '+x.time.split(' ')[1]}]}</div></span>
+                  <div class="message-text marked" ng-bind-html="markmsg(x.msg)"></div>
+              </div>
+            </div>
+            </div>
+          </div>
+        
+        </div>
+          <div class="chat-bar hbox">
+            <div class="chat-textarea">
+               <ul id="myUL">
+          <li ng-click="TagMe('Sudhanshu')">Sudhanshu</a></li>
+          <li ng-click="TagMe('Vishal')">Vishal</a></li>
+          <li ng-click="TagMe('Vipul')">Vipul</a></li>
+          <li ng-click="TagMe('Ayush')">Ayush</a></li>
+          <li ng-click="TagMe('Jayesh')">Jayesh</a></li>
+        </ul>
+
+              <form class="chat-form" ng-submit="send()"> 
+              <textarea ng-keyup="searchForTags();" ng-keydown="($event.keyCode==13) && !$event.shiftKey && !$event.preventDefault() && send()" id="chat-input" ng-model="message" autocomplete="off"  placeholder="Click here to type a chat  message."></textarea>
+              <!-- $event.keyCode == 13 && send() -->
+              <!-- ng-keyup="searchForTags()" -->
+              </form>
+            </div>
+          
+          <div class="form-pic">
+            <!-- <div class="pic-wrapper"> -->
+            <img src="/img/avatar.png" width="30px" height="30px" class="avatar-img">
+          
+        </div>
+          </div>
+        </div>
+      </div>
+      
+    
+  </body>
+</html>
+<!-- <!doctype html>
+<html ng-app="myApp">
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <script src="/lib/angular-1.6.10/angular.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js">
+    </script>
+    <script src="/js/app.js"></script>
+  </head>
+  <body ng-controller="mainController">
+    <div class="split left">
+      <div class="centered">
+        Who are you?<br>
+        <input type="radio" ng-model='room1' ng-value='"Sudhanshu"' name="rdoResult">Sudhanshu</button><br>
+        <input type="radio" ng-model='room1' ng-value='"Vishal"' name="rdoResult">Vishal</button><br>
+        <input type="radio" ng-model='room1' ng-value='"Vipul"' name="rdoResult">Vipul</button><br>
+        <input type="radio" ng-model='room1' ng-value='"Ayush"' name="rdoResult">Ayush</button><br>
+        <input type="radio" ng-model='room1' ng-value='"Jayesh"' name="rdoResult">Jayesh</button><br>
+        <input type="radio" ng-model='room1' ng-value='"group"' name="rdoResult">group</button><br>
+        <button ng-click="submituser(room1)">Submit</button><br>
+        Whom do you want to talk to?<br>
+        <input type="radio" ng-model='room' ng-value='"Sudhanshu"' name="rdoResult1">Sudhanshu</button><br>
+        <input type="radio" ng-model='room' ng-value='"Vishal"' name="rdoResult1">Vishal</button><br>
+        <input type="radio" ng-model='room' ng-value='"Vipul"' name="rdoResult1">Vipul</button><br>
+        <input type="radio" ng-model='room' ng-value='"Ayush"' name="rdoResult1">Ayush</button><br>
+        <input type="radio" ng-model='room' ng-value='"Jayesh"' name="rdoResult1">Jayesh</button><br>
+        <input type="radio" ng-model='room' ng-value='"group"' name="rdoResult1">group</button><br>
+        <button ng-click="submit(room)">Submit</button><br>
+      </div>
+    </div>
+    <div class="split center">
+      <div class="centered">
+        Whose tag do you want to see?<br>
+        <input type="radio" ng-model='room2' ng-value='"Sudhanshu"' name="rdoResult2">Sudhanshu</button><br>
+        <input type="radio" ng-model='room2' ng-value='"Vishal"' name="rdoResult2">Vishal</button><br>
+        <input type="radio" ng-model='room2' ng-value='"Vipul"' name="rdoResult2">Vipul</button><br>
+        <input type="radio" ng-model='room2' ng-value='"Ayush"' name="rdoResult2">Ayush</button><br>
+        <input type="radio" ng-model='room2' ng-value='"Jayesh"' name="rdoResult2">Jayesh</button><br>
+        <input type="radio" ng-model='room2' ng-value='"group"' name="rdoResult2">group</button><br>
+        <button ng-click="seetags(room2)">Submit1</button><br>
+      </div>
+    </div>
+    <div class="split right">
+      <div class="bottom">
+      {[{You}]} is talking with {[{roome}]}{[{test}]}
+      <button ng-click="increasen()">See Previous</button>{[{status}]}<br>
+      <input type="checkbox" ng-model="love" ng-click="loveit()">I love this mentor<br>
+      <div ng-repeat="x in messages">
+        <h6 ng-if="x.name == You" style="text-align:right;">{[{x.name}]}:{[{x.msg}]} on {[{x.date}]} {[{x.time}]}</h6>
+        <h6 ng-if="x.name != You" style="text-align:left;">{[{x.name}]}:{[{x.msg}]} on {[{x.date}]} {[{x.time}]}</h6>
+      </div>
+      <ul id="messages" ng-model="messages"></ul>
+
+      </div>
+            <center>
+      <div id="Send">
+        <ul id="myUL">
+          <li ng-click="TagMe('Sudhanshu')">Sudhanshu</a></li>
+          <li ng-click="TagMe('Vishal')">Vishal</a></li>
+          <li ng-click="TagMe('Vipul')">Vipul</a></li>
+          <li ng-click="TagMe('Ayush')">Ayush</a></li>
+          <li ng-click="TagMe('Jayesh')">Jayesh</a></li>
+        </ul>
+        <form ng-submit="send()"> 
+        <input id="m" ng-model="message" autocomplete="off" ng-keyup="searchForTags()" />
+      </form>
+        <! <button id="send" ng-click="send()">Send</button> -->
+      <!-- </div>
+      </center>
+
+    </div>
+  </body>
+</html> --> 

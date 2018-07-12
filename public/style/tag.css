@@ -1,0 +1,44 @@
+.Development{
+	display: none;
+}
+.Design{
+	display: none;
+}.Business{
+	display: none;
+}.IT{
+	display: none;
+}.Marketing{
+	display: none;
+}
+#Development{
+	background: #73C6B6;
+}
+.ai,.Development,.comms,.software,.computation,.computing,.engineering,#aicse,.mining{
+	display: none;
+}
+#engineering{
+	background:#E74C3C;
+}
+#comms{
+	background: #9B59B6  ;
+}
+#computation{
+	background:#3498DB;
+}
+#computing{
+	background: #2ECC71;
+}
+#ai{
+	background: #F1C40F;
+}
+#software{
+	background: #F39C12;
+}
+#mining{
+	background: #85C1E9;
+}
+#cse{
+	background: black;
+	color: white;
+	text-shadow: 0 0 5px white;
+}

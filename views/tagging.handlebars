@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{username}}</title>
+  <link rel="shortcut icon" type="image/jpg" href="../images/logo.jpg">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="../style/tag.css">
+  <link rel="stylesheet" type="text/css" href="style/contact.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="style/dashboard.css">
+  <script src="js/search.js"></script>
+  <script src="js/dashboard.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		$("#cse").click(function(){
+	        $("#aicse").fadeToggle();
+	        $(".ai").hide();
+	        $(".comms").hide();
+	        $(".Development").hide();
+	        $(".mining").hide();
+	        $(".computing").hide();
+	        $(".engineering").hide();
+	        $(".software").hide();
+	        $(".computation").hide();
+	    });
+	    $("#computation").click(function(){
+	        $(".computation").fadeToggle();
+	        $(".ai").hide();
+	        $(".comms").hide();
+	        $(".mining").hide();
+	        $(".engineering").hide();
+	        $(".computing").hide();
+	        $(".Development").hide();
+	        $(".software").hide();
+	    });
+	    $("#software").click(function(){
+	        $(".software").fadeToggle();
+	        $(".ai").hide();
+	        $(".comms").hide();
+	        $(".mining").hide();
+	        $(".engineering").hide();
+	        $(".computing").hide();
+	        $(".computation").hide();
+	        $(".Development").hide();
+	    });
+	    $("#engineering").click(function(){
+	        $(".engineering").fadeToggle();
+	        $(".ai").hide();
+	        $(".comms").hide();
+	        $(".mining").hide();
+	        $(".Development").hide();
+	        $(".computing").hide();
+	        $(".computation").hide();
+	        $(".software").hide();
+	    });
+	    $("#computing").click(function(){
+	        $(".computing").fadeToggle();
+	        $(".ai").hide();
+	        $(".comms").hide();
+	        $(".mining").hide();
+	        $(".engineering").hide();
+	        $(".Development").hide();
+	        $(".computation").hide();
+	        $(".software").hide();
+	    });
+	    $("#mining").click(function(){
+	        $(".mining").fadeToggle();
+	        $(".ai").hide();
+	        $(".comms").hide();
+	        $(".Development").hide();
+	        $(".engineering").hide();
+	        $(".computing").hide();
+	        $(".computation").hide();
+	        $(".software").hide();
+	    });
+	    $("#comms").click(function(){
+	        $(".comms").fadeToggle();
+	        $(".ai").hide();
+	        $(".Development").hide();
+	        $(".mining").hide();
+	        $(".engineering").hide();
+	        $(".computing").hide();
+	        $(".computation").hide();
+	        $(".software").hide();
+	    });
+	    $("#ai").click(function(){
+	        $(".ai").fadeToggle();
+	        $(".Development").hide();
+	        $(".comms").hide();
+	        $(".mining").hide();
+	        $(".engineering").hide();
+	        $(".computing").hide();
+	        $(".computation").hide();
+	        $(".software").hide();
+	    });
+	    $("#Development").click(function(){
+	        $(".Development").fadeToggle();
+	        $(".ai").hide();
+	        $(".comms").hide();
+	        $(".mining").hide();
+	        $(".engineering").hide();
+	        $(".computing").hide();
+	        $(".computation").hide();
+	        $(".software").hide();
+	    });
+	});
+	</script>
+	<script>
+			$(document).ready(function(){
+				$(".Web").hover(function(){
+			    	$('#webp').show("slow");
+			    },function(){
+			    	$('#webp').hide();
+			    });
+			    $(".App").hover(function(){
+			    	$('#appp').show("slow");
+			    },function(){
+			    	$('#appp').hide();
+			    });
+			    $(".Game").hover(function(){
+			    	$('#gamp').show("slow");
+			    },function(){
+			    	$('#gamp').hide();
+			    });
+			    $(".Blockchain").hover(function(){
+			    	$('#blop').show("slow");
+			    },function(){
+			    	$('#blop').hide();
+			    });
+
+			    //the above for development
+
+			    $(".aip").hover(function(){
+			    	$('#aipp').show("slow");
+			    },function(){
+			    	$('#aipp').hide();
+			    });
+			    $(".arp").hover(function(){
+			    	$('#arpp').show("slow");
+			    },function(){
+			    	$('#arpp').hide();
+			    });
+			    $(".cvp").hover(function(){
+			    	$('#cvpp').show("slow");
+			    },function(){
+			    	$('#cvpp').hide();
+			    });
+			    $(".mlp").hover(function(){
+			    	$('#mlpp').show("slow");
+			    },function(){
+			    	$('#mlpp').hide();
+			    });
+			    $(".nlpp").hover(function(){
+			    	$('#nlppp').show("slow");
+			    },function(){
+			    	$('#nlppp').hide();
+			    });
+
+			    //the above for AI
+
+			    $(".netp").hover(function(){
+			    	$('#netpp').show("slow");
+			    },function(){
+			    	$('#netpp').hide();
+			    });
+			    $(".csp").hover(function(){
+			    	$('#cspp').show("slow");
+			    },function(){
+			    	$('#cspp').hide();
+			    });
+			    $(".cryp").hover(function(){
+			    	$('#crypp').show("slow");
+			    },function(){
+			    	$('#crypp').hide();
+			    });
+			    $(".arcp").hover(function(){
+			    	$('#arcpp').show("slow");
+			    },function(){
+			    	$('#arcpp').hide();
+			    });
+			    $(".ospp").hover(function(){
+			    	$('#ospp').show("slow");
+			    },function(){
+			    	$('#ospp').hide();
+			    });
+
+			    //the above for comms
+
+			    $(".cgp").hover(function(){
+			    	$('#cgpp').show("slow");
+			    },function(){
+			    	$('#cgpp').hide();
+			    });
+			    $(".ipp").hover(function(){
+			    	$('#ippp').show("slow");
+			    },function(){
+			    	$('#ippp').hide();
+			    });
+			    $(".ivp").hover(function(){
+			    	$('#ivpp').show("slow");
+			    },function(){
+			    	$('#ivpp').hide();
+			    });
+			    $(".rp").hover(function(){
+			    	$('#rpp').show("slow");
+			    },function(){
+			    	$('#rpp').hide();
+			    });
+			    $(".dmp").hover(function(){
+			    	$('#dmpp').show("slow");
+			    },function(){
+			    	$('#dmpp').hide();
+			    });
+
+			    //the above for mining
+
+			    $(".pcp").hover(function(){
+			    	$('#pcpp').show("slow");
+			    },function(){
+			    	$('#pcpp').hide();
+			    });
+			    $(".cp").hover(function(){
+			    	$('#cpp').show("slow");
+			    },function(){
+			    	$('#cpp').hide();
+			    });
+			    $(".dcp").hover(function(){
+			    	$('#dcpp').show("slow");
+			    },function(){
+			    	$('#dcpp').hide();
+			    });
+			    $(".rdp").hover(function(){
+			    	$('#rdpp').show("slow");
+			    },function(){
+			    	$('#rdpp').hide();
+			    });
+			    $(".osp").hover(function(){
+			    	$('#ospp').show("slow");
+			    },function(){
+			    	$('#ospp').hide();
+			    });
+
+			    //the above for computing
+			});
+	</script>
+	<style>
+		#webp,#appp,#gamp,#blop,#rdpp,#dcpp,#cpp,#pcpp,#dmpp,#rpp,#ivpp,#ippp,#arcpp,#ospp,#cspp,#crypp,#cgpp,#netpp,#nlppp,#mlpp,#cvpp,#arpp,#aipp{
+			display: none;
+		}
+	</style>
+	<script>
+	$(document).ready(function(){
+	    $(".Web").click(function(){
+	        $(".Web").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".App").click(function(){
+	        $(".App").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".Game").click(function(){
+	        $(".Game").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".Bitcoin").click(function(){
+	        $(".Bitcoin").animate({
+	            opacity: '0.5'
+	        });
+	    });
+
+	    $(".Blockchain").click(function(){
+	        $(".Blockchain").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".aip").click(function(){
+	        $(".aip").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".arp").click(function(){
+	        $(".arp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".cvp").click(function(){
+	        $(".cvp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".mlp").click(function(){
+	        $(".mlp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".netp").click(function(){
+	        $(".netp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".nlpp").click(function(){
+	        $(".nlpp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".nrtp").click(function(){
+	        $(".netp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".csp").click(function(){
+	        $(".csp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".cryp").click(function(){
+	        $(".cryp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".arcp").click(function(){
+	        $(".arcp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".osp").click(function(){
+	        $(".osp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".cgp").click(function(){
+	        $(".cgp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".ipp").click(function(){
+	        $(".ipp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".ivp").click(function(){
+	        $(".ivp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".rp").click(function(){
+	        $(".rp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".dmp").click(function(){
+	        $(".dmp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".pcp").click(function(){
+	        $(".pcp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".cp").click(function(){
+	        $(".cp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".dcp").click(function(){
+	        $(".dcp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".rdp").click(function(){
+	        $(".rdp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".ssp").click(function(){
+	        $(".ssp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".ctpp").click(function(){
+	        $(".ctpp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".plpp").click(function(){
+	        $(".plpp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".ap").click(function(){
+	        $(".ap").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".dsp").click(function(){
+	        $(".dsp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".sep").click(function(){
+	        $(".sep").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".adp").click(function(){
+	        $(".adp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".cpp").click(function(){
+	        $(".cpp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".hcip").click(function(){
+	        $(".hcip").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".rep").click(function(){
+	        $(".rep").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".atp").click(function(){
+	        $(".atp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".ctp").click(function(){
+	        $(".ctp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".cctp").click(function(){
+	        $(".cctp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".qctp").click(function(){
+	        $(".qctp").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	    $(".aaap").click(function(){
+	        $(".aaap").animate({
+	            opacity: '0.5'
+	        });
+	    });
+	}); 
+	</script> 
+</head>
+<body>
+<div class="contain">
+<div class="container">
+  <nav class="nav navbar-custom">
+    <div class="container-fluid" id="heading">
+      <div class="nav navbar-header">
+        <nav class="navbar-brand"><a href="/"><img src="../images/logo.jpg" style="height:70px;width:70px;border-radius: 0%;"></a></nav>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/team">Team</a></li>
+        <li><a href="/tag" style="background: white;color: black;">Explore</a></li>
+        <li><a href="/">Dashboard</a></li>
+        <li><a href="/about">About Conectar</a></li>
+        <li><a href="/contact">Query</a></li>
+        <li><a href="/chat">Chat</a></li>
+        <li><a href="/users/logout">LogOut</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+</div>
+	<div class="container-fluid" style="margin-top: 2%;">
+		<div class="col-md-2" style="box-shadow:0 0 10px black;">
+			<table class="table">
+				<tr>
+					<td><button id="cse" class="btn" style="width: 100%;height: 100%; border-radius: 5px;">Computer Sciences</button></td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<table class="table" id="aicse" style="box-shadow:0 0 10px black;">
+				<tr>
+					<td><button id="ai" class="btn" style="width: 100%;height: 100%; border-radius: 5px;">Artificial Intelligence</button></td>
+				</tr>
+				<tr>
+					<td><button id="comms" class="btn" style="width: 100%;height: 100%; border-radius: 5px;color: white;">Communication , security and Computer architecture</button></td>
+				</tr>
+				<tr>
+					<td><button id="mining" class="btn" style="width: 100%;height: 100%; border-radius: 5px;">Computer graphics, Data mining and Robotics</button></td>
+				</tr>
+				<tr>
+					<td><button id="computing" class="btn" style="width: 100%;height: 100%; border-radius: 5px;">Databases and computing theory</button></td>
+				</tr>
+				<tr>
+					<td><button id="Development" class="btn" style="width: 100%;height: 100%; border-radius: 5px;">Development</button></td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-2">
+			<section>
+			<table class = "table Development" style="box-shadow:0 0 10px black;">
+				<tr>
+					<td>
+					<form action="/tagbtn" method="post">
+						<input type="submit" class="btn Web" name="tag" id="Development" value="Web Development" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+					</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn App" name="tag" id="Development" value="App Development" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn Blockchain" name="tag" id="Development" value="Blockchain Development" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+						</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn Game" name="tag" id="Development" value="Game Development" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+				</tr>
+			</table>
+		</section>
+			<table class = "table ai" style="box-shadow:0 0 10px black;">
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn aip" name="tag" id="ai" value="Artificial intelligence" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+					</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn arp" name="tag" id="ai" value="Automated reasoning" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn cvp" name="tag" id="ai" value="Computer Vision" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn mlp" name="tag" id="ai" value="Machine Learning" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn nlpp" name="tag" id="ai" value="Natural language processing" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+			</table>
+			<table class = "table comms" style="box-shadow:0 0 10px black;color: white;">
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn netp" name="tag" id="comms" value="Networking" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn csp" name="tag" id="comms" value="Computer Security" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn cryp" name="tag" id="comms" value="Cryptography" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn arcp" name="tag" id="comms" value="Computer Architecture" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn osp" name="tag" id="comms" value="Computer Operating systems" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+			</table>
+			<table class = "table mining" style="box-shadow:0 0 10px black;">
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn cgp" name="tag" id="mining" value="Computer Graphics" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn ipp" name="tag" id="mining" value="Image processing" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn ivp" name="tag" id="mining" value="Information visualization" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn rp" name="tag" id="mining" value="Robotics" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn dmp" name="tag" id="mining" value="Data Mining" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+			</table>
+			<table class = "table computing" style="box-shadow:0 0 10px black;">
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn pcp" name="tag" id="computing" value="Parallel Computing" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn cp" name="tag" id="computing" value="Concurrency" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn dcp" name="tag" id="computing" value="Distributed Computing" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+
+						<form action="/tagbtn" method="post">
+						<input type="submit" class="btn rdp" name="tag" id="computing" value="Relational Databses" style="width: 100%;height: 100%; border-radius: 5px;">
+						<!--<button id="Development" class="btn Web" style="width: 100%;height: 100%; border-radius: 5px;">Web Development</button>-->
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #FCF3CF;" id="arpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Automated reasoning
+				</h1>
+				<p style="text-align: center;">
+					Automated reasoning is an area of computer science and mathematical logic dedicated to understanding different aspects of reasoning. The study of automated reasoning helps produce computer programs that allow computers to reason completely, or nearly completely, automatically. Although automated reasoning is considered a sub-field of artificial intelligence, it also has connections with theoretical computer science, and even philosophy.
+
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/03e3UU4Z33Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #FCF3CF;" id="cvpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Computer Vision
+				</h1>
+				<p style="text-align: center;">
+					Computer vision is a field of computer science that works on enabling computers to see, identify and process images in the same way that human vision does, and then provide appropriate output. It is like imparting human intelligence and instincts to a computer. In reality though, it is a difficult task to enable computers to recognise images of different objects.Computer vision is closely linked with artificial intelligence, as the computer must interpret what it sees, and then perform appropriate analysis or act accordingly.
+
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/OcycT1Jwsns" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #FCF3CF;" id="aipp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Artificial intelligence
+				</h1>
+				<p style="text-align: center;">
+					Artificial intelligence (AI, also machine intelligence, MI) is intelligence demonstrated by machines, in contrast to the natural intelligence (NI) displayed by humans and other animals. In computer science AI research is defined as the study of "intelligent agents": any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals. Colloquially, the term "artificial intelligence" is applied when a machine mimics "cognitive" functions that humans associate with other human minds, such as "learning" and "problem solving”.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/mJeNghZXtMo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<!--start-->
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #FCF3CF;" id="mlpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Machine Learning
+				</h1>
+				<p style="text-align: center;">
+					Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.
+                    The process of learning begins with observations or data, such as examples, direct experience, or instruction, in order to look for patterns in data and make better decisions in the future based on the examples that we provide. The primary aim is to allow the computers learn automatically without human intervention or assistance and adjust actions accordingly.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/nKW8Ndu7Mjw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #FCF3CF;" id="nlppp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Natural language processing (NLP)
+				</h1>
+				<p style="text-align: center;">
+					Natural language processing (NLP) is an area of computer science and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyse large amounts of natural language data.
+                    Challenges in natural language processing frequently involve speech recognition, natural language understanding, and natural language generation.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/M5ZcXm3HvtA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #E8DAEF;" id="cspp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Cybersecurity
+				</h1>
+				<p style="text-align: center;">
+					Cybersecurity, computer security or IT security is the protection of computer systems from theft of or damage to their hardware, software or electronic data, as well as from disruption or misdirection of the services they provide.
+  					Cybersecurity includes controlling physical access to system hardware, as well as protecting against harm that may be done via network access, malicious data and code injection. Also, due to malpractice by operators, whether intentional or accidental, IT security personnel are susceptible to being tricked into deviating from secure procedures through various methods of social engineering.
+  				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/fi44mL7mcq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #E8DAEF;" id="crypp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Cryptography
+				</h1>
+				<p style="text-align: center;">
+					Cryptography or cryptology is the practice and study of techniques for secure communication in the presence of third parties called adversaries. More generally, cryptography is about constructing and analyzing protocols that prevent third parties or the public from reading private messages; various aspects in information security such as data confidentiality, data integrity, authentication, and non-repudiation are central to modern cryptography. Modern cryptography exists at the intersection of the disciplines of mathematics, computer science, electrical engineering, communication science, and physics. Applications of cryptography include electronic commerce, chip-based payment cards, digital currencies, computer passwords, and military communications.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/jhXCTbFnK8o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #E8DAEF;" id="arcpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					 Computer Architecture
+				</h1>
+				<p style="text-align: center;">
+					In computer engineering, computer architecture is a set of rules and methods that describe the functionality, organization, and implementation of computer systems. Some definitions of architecture define it as describing the capabilities and programming model of a computer but not a particular implementation. In other definitions computer architecture involves instruction set architecture design, microarchitecture design, logic design, and implementation.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/HEjPop-aK_w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #E8DAEF;" id="ospp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Operating System
+				</h1>
+				<p style="text-align: center;">
+					An Operating System (OS) is an interface between a computer user and computer hardware. An operating system is a software which performs all the basic tasks like file management, memory management, process management, handling input and output, and controlling peripheral devices such as disk drives and printers.
+  					Some popular Operating Systems include Linux, Windows, OS X, VMS, OS/400, AIX, z/OS, etc.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/gxhxcvBuanU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #E8DAEF;" id="netpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Computer Networking
+				</h1>
+				<p style="text-align: center;">
+					A computer network is a set of computers connected together for the purpose of sharing resources. The most common resource shared today is connection to the Internet. Other shared resources can include a printer or a file server. The Internet itself can be considered a computer network.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/aHJElrgj6UA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D6EAF8;" id="cgpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Computer Graphics
+				</h1>
+				<p style="text-align: center;">
+					Computer graphics are pictures and films created using computers. Usually, the term refers to computer-generated image data created with help of specialized graphical hardware and software. It is a vast and recently developed area of computer science. Some topics in computer graphics include user interface design, sprite graphics, vector graphics, 3D modeling, shaders, GPU design, implicit surface visualization with ray tracing, and computer vision, among others. The overall methodology depends heavily on the underlying sciences of geometry, optics, and physics.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/VT5oZndzj68" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D6EAF8;" id="ippp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Image processing
+				</h1>
+				<p style="text-align: center;">
+					Image processing is a method to perform some operations on an image, in order to get an enhanced image or to extract some useful information from it. It is a type of signal processing in which input is an image and output may be image or characteristics/features associated with that image. Nowadays, image processing is among rapidly growing technologies. It forms core research area within engineering and computer science disciplines too.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/QMLbTEQJCaI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D6EAF8;" id="ivpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Information visualization
+				</h1>
+				<p style="text-align: center;">
+					Information visualization is the process of representing data in a visual and meaningful way so that a user can better understand it. Dashboards and scatter plots are common examples of information visualization. Via its depicting an overview and showing relevant connections, information visualization allows users to draw insights from abstract data in an efficient and effective manner.
+					Information visualization plays an important role in making data digestible and turning raw information into actionable insights. It draws from the fields of human-computer interaction, visual design, computer science, and cognitive science, among others. Examples include world map-style representations, line graphs, and 3-D virtual building or town plan designs.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/PbQ8UtGdm9I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D6EAF8;" id="dmpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Data mining
+				</h1>
+				<p style="text-align: center;">
+					Data mining is the process of discovering patterns in large data sets involving methods at the intersection of machine learning, statistics, and database systems. It is an essential process where intelligent methods are applied to extract data patterns. It is an interdisciplinary subfield of computer science. The overall goal of the data mining process is to extract information from a data set and transform it into an understandable structure for further use. Aside from the raw analysis step, it involves database and data management aspects, data pre-processing, model and inference considerations, interestingness metrics, complexity considerations, post-processing of discovered structures, visualization, and online updating. Data mining is the analysis step of the "knowledge discovery in databases" process, or KDD.
+
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/R-sGvh6tI04" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D6EAF8;" id="rpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Robotics
+				</h1>
+				<p style="text-align: center;">
+					Robotics is an interdisciplinary branch of engineering and science that includes mechanical engineering, electronics engineering, computer science, and others
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/nfXZ7k29mW4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D5F5E3;" id="pcpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					 Parallel computing
+				</h1>
+				<p style="text-align: center;">
+					Parallel computing is a type of computation in which many calculations or the execution of processes are carried out concurrently. Large problems can often be divided into smaller ones, which can then be solved at the same time. There are several different forms of parallel computing: bit-level, instruction-level, data, and task parallelism. Parallelism has long been employed in high-performance computing, but it's gaining broader interest due to the physical constraints preventing frequency scaling. As power consumption (and consequently heat generation) by computers has become a concern in recent years, parallel computing has become the dominant paradigm in computer architecture, mainly in the form of multi-core processors.
+
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/q7sgzDH1cR8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D5F5E3;" id="cpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Concurrency
+				</h1>
+				<p style="text-align: center;">
+					In computer science, concurrency refers to the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome. This allows for parallel execution of the concurrent units, which can significantly improve overall speed of the execution in multi-processor and multi-core systems. In more technical terms, concurrency refers to the decomposability property of a program, algorithm, or problem into order-independent or partially-ordered components or units.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/VLq9DfL4g8w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D5F5E3;" id="dcpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Distributed computing
+				</h1>
+				<p style="text-align: center;">
+					Distributed computing is a field of computer science that studies distributed systems. A distributed system is a system whose components are located on different networked computers, which then communicate and coordinate their actions by passing messages to each other. The components interact with each other in order to achieve a common goal. Three significant characteristics of distributed systems are: concurrency of components, lack of a global clock, and independent failure of components. Examples of distributed systems vary from SOA-based systems to massively multiplayer online games to peer-to-peer applications.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/nH9uwoyczFc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D5F5E3;" id="rdpp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Relational Database
+				</h1>
+				<p style="text-align: center;">
+					A relational database is a set of formally described tables from which data can be accessed or reassembled in many different ways without having to reorganize the database tables. The standard user and application programming interface (API) of a relational database is the Structured Query Language (SQL). SQL statements are used both for interactive queries for information from a relational database and for gathering data for reports.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/NvrpuBAMddw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D0ECE7;" id="webp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Web Development
+				</h1>
+				<p style="text-align: center;">
+					Web development is a broad term for the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing the simplest static single page of plain text to the most complex web-based internet applications (or just 'web apps') electronic businesses, and social network services. A more comprehensive list of tasks to which web development commonly refers, may include web engineering, web design, web content development, client liaison, client-side/server-side scripting, web server and network security configuration, and e-commerce development. 
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/XCCVJAnbKXw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D0ECE7;" id="gamp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Game Development
+				</h1>
+				<p style="text-align: center;">
+					A video game developer is a software developer that specializes in video game development– the process and related disciplines of creating video games. A game developer can range from one person who undertakes all tasks to a large business with employee responsibilities split between individual disciplines, such as programming, design, art, testing, etc. 
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/m4p7T9O_tqg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D0ECE7;" id="appp">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					App development
+				</h1>
+				<p style="text-align: center;">
+					Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones. These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a Web browser.
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/TWFUSxqMJic" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4" style="box-shadow:0 0 10px black;background: #D0ECE7;" id="blop">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">
+					Blockchain Development
+				</h1>
+				<p style="text-align: center;">
+					If you are a beginner, then there are certain terms that you need to be familiar with:<br>
+					Blockchain: The blockchain is a chain of blocks where each block contains data of value without any central supervision. It is cryptographically secure and immutable.<br>
+					Decentralized: Blockchain is said to be decentralized because there is no central authority supervising anything.<br>
+					Consensus Mechanism: The mechanism by which a decentralized network comes to a consensus on certain matters.<br>
+					Miners: Users who use their computational power to mine for blocks.
+
+				</p>
+				<iframe width="450" height="255" src="https://www.youtube.com/embed/9v8--hje4xc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-4">			
+		</div>
+	</div>
+	<div class="container-fluid">
+			<div class="col-md-3" style="box-shadow: 0 0 10px black;margin:3%;margin-left:6%;background: #D6EAF8;">
+				<h1 style="text-align: center;">Inspire</h1>
+				<p style="font-size:22px;text-align: center;">A unique way to share your abundant knowledge about the topics of your mastery and 	interest to people willing to learn. Accept requests on your own choosing then inspire others and be a part in creating a literate and skilled society.</p>
+			</div>
+			<div class="col-md-3" style="box-shadow: 0 0 10px black;margin:3%;background: #D1F2EB;">
+				<h1 style="text-align: center;">Grasp</h1>
+				<p style="font-size:21px;text-align: center;">Find other people who want to inspire and share thier knowledge about some particular topic(s) using our prioritized search. Send them requests and then have personal chats along with group chats based on these topics to become Masters in new endeavours and gain value.</p>
+			</div>
+			<div class="col-md-3" style="box-shadow: 0 0 10px black;margin:3%;background: #E8DAEF;">
+				<h1 style="text-align: center;">Similar Interest</h1>
+				<p style="font-size:19px;text-align: center;">Talk to like-minded people who have the same burning desire to do something as you in your area of expertise. Explore the entrepreneurial side of your mesmerizing ideas and thoughts with people willing to contribute. Not much  can be done alone so find people with whom you can come up with exceptional ways to innovate and change the world.</p>
+			</div>
+	</div>
+	<script>
+		function speak(text1) {
+			var msg = new SpeechSynthesisUtterance();
+			var voices = window.speechSynthesis.getVoices()
+			console.log(voices);
+			msg.volume = 20;
+			msg.rate = 1.5;
+			msg.pitch = 10;
+			msg.text = text1;
+			window.speechSynthesis.speak(msg);
+		};
+		speak('Congratulations {{username}} you have successfully registered to CONECTAR...');
+		speak('I will introduce me to you soon..');
+		speak('But first Lets talk about your field of expertise');
+		speak('Select those you think you wanna talk and discuss to others');
+		speak('So lets begin then , go ahead and explore...');
+	</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{username}}:{{about}}</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="shortcut icon" type="image/jpg" href="../images/logo.jpg">
+	<link rel="stylesheet" type="text/css" href="style/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="style/styling.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script
+				  src="https://code.jquery.com/jquery-3.3.1.min.js"
+				  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+				  crossorigin="anonymous"></script>
+</head>
+<body id="body1">
+	<header class="nav-header">
+	<div class="container">
+		<a href="/"><img src="/images/logo.jpg" width="40px" height="40px" style="position: fixed;top:3px;left:calc(50% - 20px);"></a>
+	<div class="nav">
+		<div class="home-nav">
+		<a href="/"><span class="hint--bottom hint--rounded " aria-label="Home"><i class="material-icons">home</i></span></a>
+		</div>
+			<div class="notification-nav">
+		<span class="hint--bottom hint--rounded " aria-label="You have no unread notifications."><i class="material-icons">notifications_none</i></span>
+	</div>
+	<div class="friend-nav">
+		<span class="hint--bottom hint--rounded " aria-label="Friend Requests"><i class="material-icons">people_outline</i></span>
+	</div>
+	<a href="/chat">
+	<div class="chat-nav">
+			<span class="hint--bottom hint--rounded " aria-label="Chat"><i class="material-icons">chat</i></span></a>
+	</div>
+
+	</div>
+	<div class="profile-input">
+		<div class="search">
+			<form class="search-form" action="/user" method="get">
+				<input type="search" id="search-input" name="searchinput" placeholder="Search by Username" />
+				<span class="search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#7289DA"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg></span>
+			</form>
+			<div class="header-profile">
+				<img src="/images/avatar.png" width="32px" height="32px" style="cursor:pointer;border-radius: 3px;">
+			</div>
+		</div>
+	</div>
+</div>
+</header>
+		<div class="col-md-12" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../images/about.jpg);height: 250px;box-shadow:0 0 10px black;background-size: 100%;margin-top: 56px;">
+			<h1 style="text-align: center;margin-top:8%; color: white;font-size: 50px;font-family: serif;">
+				Why Conectar?
+			</h1>
+		</div>
+		<div class="col-md-12" style="background:url(../images/about2.jpg);box-shadow:0 0 10px black;">
+			<h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;text-align: center;margin-top: 2%;font-size: 45px;">
+				Inspire::Grasp::Discuss
+			</h1>
+			<p style="text-align: center;margin-top:2%;">
+				Conectar is a hybrid platform which is built for teaching others, self learning as well as for fostering Entrepreneurship. You can search for topics that you want to learn, find experts around you and Grasp the knowledge. You can also Inspire others by teaching them your field of expertise or if you have an idea, you can search for like minded people around you and have a nice Discussion with them.
+			</p>
+			<div class="container" style="margin-top: 2%;margin-bottom: 2%;">
+				<div class="col-md-4">
+				<img src="../images/inspire.jpg" style="width: 100%;height:200px;border-radius: 10px;">
+				</div>
+				<div class="col-md-4">
+				<img src="../images/grasp.jpg" style="width: 100%;height: 200px;border-radius: 10px;">
+				</div>
+				<div class="col-md-4">
+				<img src="../images/discuss.jpg" style="width: 100%;height:200px;border-radius: 10px;">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12" style="height: 200px;box-shadow:0 0 10px black;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/about4.jpg);background-size: 100%;height: 500px;">
+			<div class="container">
+			<h1 style="margin-top: 4%;color: white;text-align: center;">
+				Connecting Enthusiasts to Proficients
+			</h1>
+			<p style="margin-top: 6%;color: white;font-size: 15px;text-align: center;">
+				Conectar brings you close to the Society. You tell us your interests.<br>
+				We recommend you the Proficients in the same. Simple
+			</p>
+			</div>
+		</div>
+		<div class="col-md-12" style="height:700px;box-shadow:0 0 10px black;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/future.jpg);background-size: 100%;">
+			<div class="container">
+			<h1 style="margin-top: 4%;color: white;text-align: center;">
+				Future Prospects
+			</h1>
+			<p style="margin-top: 6%;color: white;font-size: 15px;text-align: center;">
+				<ul>
+					<li class="list-group-item" style="background: none;color: white;">
+						1. Addition of Posting data and feed system. Integration to Android. 
+					</li>
+					<li class="list-group-item" style="background: none;color: white;">
+						2. Using ML for Recommending topics that you can learn based on your interest and past searches.
+					</li>
+					<li class="list-group-item" style="background: none;color: white;">
+						3. Giving incentives to users who have significantly been upvoted by helping others
+					</li>
+					<li class="list-group-item" style="background: none;color: white;">
+						4. Increasing number of tags to cover various other fields.
+					</li>
+				</ul>
+			</p>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<h1 style="text-align: center;color: white;text-shadow: 0 0 5px black;font-size: 50px;margin-top:30px;">
+				Quick Go-Through
+			</h1>
+			<div class="col-md-12">
+				<video src="../images/video.mp4" style="width: 100%;height: 600px;" type = "video/mp4" controls>
+				</video>
+			</div>
+		</div>
+<script>
+		var vol = 0;
+		const wage = document.getElementById('body1');
+		wage.addEventListener('keydown', (e) => {
+		    if (e.key === 'Enter') {
+		        vol = 20;
+		        speak('Welcome to the About conectar page...',vol);
+		        speak('Here you will find out what you can do with conectar',vol);
+				speak('Enjoy The Tour and as i said before',vol);
+				speak('release your brains like a free bull to the world of conectar',vol);
+	    }
+		});
+	function speak(text1,v) {
+			var msg = new SpeechSynthesisUtterance();
+			var voices = window.speechSynthesis.getVoices()
+			console.log(voices);
+			msg.volume = v;
+			msg.rate = 1.5;
+			msg.pitch = 10;
+			msg.text = text1;
+			window.speechSynthesis.speak(msg);
+		};
+</script>
+</body>
+</html>
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{username}}:{{query}}</title>
+  <link rel="shortcut icon" type="image/jpg" href="../images/logo.jpg">
+  <link rel="stylesheet" type="text/css" href="style/contact.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="style/dashboard.css">
+  <script src="js/search.js"></script>
+  <script src="js/dashboard.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+</head>
+<body id="body1">
+<div class="contain">
+<div class="container">
+  <nav class="nav navbar-custom">
+    <div class="container-fluid" id="heading">
+      <div class="nav navbar-header">
+        <nav class="navbar-brand"><a href="/"><img src="../images/logo.jpg" style="height:70px;width:70px;border-radius: 0%;"></a></nav>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/team">Team</a></li>
+        <li><a href="/">Dashboard</a></li>
+        <li><a href="/about">About Conectar</a></li>
+        <li><a href="/contact" style="background: white;color: black;">Query</a></li>
+        <li><a href="/chat">Chat</a></li>
+        <li><a href="/users/logout">LogOut</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+</div>
+  <div class="container">
+    <h1 class="brand"><span>Conectar</span></h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        <h3>Query Form</h3>
+        <ul>
+          <li><i class="fa fa-phone"></i> (+91)-9413605678</li>
+          <li><i class="fa fa-envelope"></i>conectar589@gmail.com</li>
+        </ul>
+      </div>
+      <div class="contact" name="contact">
+        <h3>Email Us</h3>
+        {{msg}}
+        <form method="POST" action="send">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name">
+          </p>
+          <p>
+            <label>Company</label>
+            <input type="text" name="company">
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email">
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="text" name="phone">
+          </p>
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+<script>
+  var vol = 0;
+    const wage = document.getElementById('body1');
+    wage.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            vol = 20;
+            speak('Hello there, Your feedback is highly appreciated for the Conectar Platform...',vol);
+            speak('We ensure to resolve your query.',vol);
+        }
+    });
+  function speak(text1,v) {
+      var msg = new SpeechSynthesisUtterance();
+      var voices = window.speechSynthesis.getVoices()
+      console.log(voices);
+      msg.volume = v;
+      msg.rate = 1.5;
+      msg.pitch = 10;
+      msg.text = text1;
+      window.speechSynthesis.speak(msg);
+    };
+</script>
+</body>
+</html>

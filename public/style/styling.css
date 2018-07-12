@@ -1,0 +1,708 @@
+@font-face { font-family: Whitney Medium; src: url('whitney-medium.ttf'); }
+@font-face { font-family: WhitneyMedium; src: url('whitney-medium.ttf'); }
+@font-face { font-family: Whitney SemiBold; src: url('Whitney-Semibold-Pro.otf'); }
+@font-face { font-family: Whitney; src: url('whitney-book-webfont.ttf'); }
+@font-face { font-family: Whitney Bold; font-weight: bold; src: url('whitney-bold-webfont.ttf'); }
+*
+{
+	word-wrap: break-word;
+	box-sizing: border-box;
+	font-family: Whitney;
+
+}
+.vbox {
+        /* previous syntax */
+        display: -webkit-box;
+        display:    -moz-box;
+        display:         box;
+
+        -webkit-box-orient: vertical;
+           -moz-box-orient: vertical;
+            -ms-box-orient: vertical;
+                box-orient: vertical;
+
+        /* current syntax */
+        display: -webkit-flex;
+        display:    -moz-flex;
+        display:     -ms-flex;
+        display:         flex;
+
+        -webkit-flex-direction: column;
+           -moz-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+.hbox {
+        /* previous syntax */
+        display: -webkit-box;
+        display:    -moz-box;
+        display:     -ms-box;
+        display:         box;
+
+        -webkit-box-orient: horizontal;
+           -moz-box-orient: horizontal;
+            -ms-box-orient: horizontal;
+                box-orient: horizontal;
+
+        /* current syntax */
+        display: -webkit-flex;
+        display:    -moz-flex;
+        display:     -ms-flex;
+        display:         flex;
+
+        -webkit-flex-direction: row;
+           -moz-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+      }
+      html,body
+      {
+      	/*width: 100%;
+        height: 100%;*/
+        /*height: */
+        margin: 0;
+         font-family: Whitney SemiBold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      body
+      {
+      	position: relative;
+      	height: 100%;
+      }
+.nav-header
+{
+	z-index: 100;
+	user-select: none;
+	display: flex;
+	    padding: 8px 0px 12px 0px;
+    background-color:#7289DA;
+    position: fixed;
+	top:0;
+	 margin:0px auto;
+	 color:white;
+	 font-size: 14px;
+	 width: 100%;
+	 border-bottom:1px solid rgba(0,0,0,0.05);
+}
+a
+{
+	text-decoration: none;
+	font:inherit;
+	color:inherit;
+}
+.nav-header .nav
+{
+
+	cursor: pointer;
+	float:left;
+	min-height: 32px;
+	user-select: none;
+	height: 32px;
+}
+.content
+{
+	margin-top: 50px;
+	height: 4000px;
+	width: 100%;
+	min-height: 4000px;
+}
+.fixed-top
+{
+	
+}
+#search-input {
+    background-color: #f5f8fa;
+    border-radius: 3px;
+    font-weight: 400;
+    border: 1px solid #e6ecf0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #14171a;
+    /*display: block;*/
+    font-size: 13px;
+    height: 32px;
+    line-height: 16px;
+    padding: 8px 32px 8px 12px;
+    transition: all .2s ease-in-out;
+    width: 221px;
+    margin-right: 12px;
+}
+ #search-input:focus
+{
+	background-color: white;
+	border: 2px solid lightblue;
+}
+.about-text
+{
+    /* padding-bottom: 4px; */
+    line-height: 18px;
+    vertical-align: top;
+}
+input
+{
+	outline: 0;
+}
+.container
+{
+	text-align: center;
+	max-width: 1012px;
+	width: 1012px;
+	margin:0 auto;
+}
+.container-main
+{
+	/*text-align: center;*/
+	max-width: 1012px;
+	width: 1012px;
+	margin:76px auto 40px auto;
+}
+.profile-input
+{
+	float: right;
+}
+.search-icon
+{
+	top: 4px;
+    right: 20px;
+    width: 24px;
+    cursor: pointer;
+	position: absolute;
+	width: 24px;
+}
+.nav div
+{
+	display: inline-block;
+	margin:11px 0 0 15px;
+}
+.search-form
+{
+	position: relative;
+	margin-right: 15px;
+	float: left;
+}
+.header-profile
+{
+	float: right;
+}
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; } /* Default */
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+/*.container-fo
+{
+	max-width: 1012px;
+	width: 1012px;
+	margin:0 auto;
+	position: absolute;
+	bottom: 0;
+	height:80px;
+	left:0;
+}*/
+/* .footer
+{
+	padding-bottom: 40px;
+} */
+.footer .container-footer
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+	margin:auto;
+	font-size: 12px;
+	font-weight: lighter;
+	font-family: Whitney;
+}
+.left-profile-about .profile-pic img
+{
+	cursor: pointer;
+	border-radius: 6px !important;
+}
+.left-profile-about
+{
+	float: left;
+	transition: 0.2s;
+	width: 25%;
+}
+.profile-name
+{
+	font-size: 26px;
+    line-height: 30px;
+    font-weight: 600;
+    color: rgba(36,41,46,0.9);
+    font-family: Whitney SemiBold;
+    padding-top: 16px !important;
+    /*padding-bottom: 16px !important;*/
+}
+.profile-username
+{
+	font-family: Whitney;
+	font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: #666;
+    padding-bottom: 16px !important;
+}
+.profile-bio
+{
+	font-family: Whitney Book;
+}
+.about-profile-text
+{
+    margin-bottom: 8px;
+	font-size: 15px;
+    color: #6a737d;
+
+}
+.about-profile-text svg
+{
+    padding-right: 22px;
+}
+.left-profile-about.isSticky
+{
+	
+		/*visibility: hidden;*/
+}
+.left-profile-about.isSticky::after {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    /*z-index: ;*/
+    /*display: none;*/
+    height: 110px;
+    content: "";
+    background-color: #fff;
+    border-bottom: solid 1px #d1d5da;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.075);
+    /*opacity: 0;*/
+    transition: 0.2s;
+}
+.left-profile-about .profile-card
+{
+	display: none;
+}
+.left-profile-about.isSticky .profile-card button
+{
+	visibility: hidden;
+}
+.left-profile-about.isSticky.isStickybutton .profile-card button
+{
+	visibility: visible;
+}
+.left-profile-about.isSticky .profile-card
+{
+		display: flex;
+		position: fixed;
+		top:56px;
+}
+.card-img
+{
+	margin: auto 8px auto 0px;
+	user-select: none;
+	/*padding-right: 8px;*/
+}
+.card-username
+{
+	/*font-weight: 600;*/
+	line-height: 1.25;
+	font-family: Whitney SemiBold;
+	font-size: 16px;
+    /*line-height: 1.5;*/
+    color: #24292e;
+	margin: auto 0;
+}
+.profile-card
+{
+	min-height: 54px;
+	height: 54px;
+	z-index: 1000;
+}
+.details
+{
+	z-index: 200;
+	left:538px;
+	width: 727px;
+	float: right;
+}
+.details::after
+{
+	    content: "";
+    position: fixed;
+    width: 727px;
+    left: 528px;
+    top: 56px;
+    height: 21px;
+    background-color: white;
+    z-index: 10;
+}
+.Sticky
+{
+	position: fixed;
+	top:56px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li
+{
+	display: inline;
+}
+.details ul li
+{
+	cursor: pointer;
+	font-family: Whitney Medium;
+	    padding: 16px 8px;
+    margin-right: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #586069;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    min-width: 85px;
+    background-color: white;
+}
+.details ul li.active
+{
+	border-bottom: thick solid rgba(114, 137, 218, 0.5);
+}
+.details ul li:hover
+{
+	border-bottom: thick solid rgba(114, 137, 218, 0.5);
+}
+.container_{
+	min-height: 80px;
+	margin: 0px auto;
+    /*background: rgba(200,200,200,0.2);*/
+    border-bottom: 1px solid rgba(200,200,200,1);
+    padding: 20px;
+}
+.content-details
+{
+	margin-top: 24px;
+}
+.btn{
+	/*position: relative;*/
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #7289DA;
+    color:white;
+    background-repeat: repeat-x;
+    background-position: -1px -1px;
+    background-size: 110% 110%;
+    border: 1px solid rgba(27,31,35,0.2);
+    border-radius: 0.25em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
+    .btn-follow
+    {
+    	color:white;
+    	background-color: #7289DA;
+    	border-radius: 2px;
+       -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;	
+    	height: 20px;
+    	margin: auto 10px;
+    	display: inline-block;
+    /*padding: 6px 12px;*/
+    /*font-size: 14px;*/
+    /*font-weight: 600;*/
+    /*line-height: 20px;*/
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    }
+    .main-bar
+    {
+        border: 1px solid rgba(153, 170, 181, 0.3);
+    padding: 30px 20px 30px 40px;
+    border-radius: 3px;
+    font-weight: 600;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    border: 1px solid #ddd;
+    /* border-radius: 30px; */
+    box-sizing: border-box;
+    color: #999;
+    height: 40px;
+    padding-left: 50px;
+    padding-right: 20px;
+    line-height: normal;
+    font-size: 15px;
+    -webkit-appearance: none;
+    width: 100%;
+    }
+    .main-bar:focus
+    {
+        /* border: 1px solid #7289da; */
+    box-shadow: 0 9px 20px #99AAB5;
+    color: #4f545c;
+    }
+    .main-search-container
+    {
+        position: relative;
+        width:75%;
+        float: right;
+    }
+    .search-icon-main
+    {
+        position: absolute;
+        top: 17px;
+    left: 14px;
+    }
+    .search-results-title
+    {
+        /* padding:20px; */
+        padding-left: 28px;
+        font-size:17px;
+        justify-content: space-between !important;
+        
+    }
+    .search-results-title h3
+    {
+        font-family: Whitney Medium;
+    color: rgba(36, 41, 46, 0.9);
+    }
+    .search-results-title h3 span.title-text
+    {
+        color:#7289DA;
+        /* font-family: Whitney SemiBold; */
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    .resulted-user
+    {
+        border-top: 1px solid #e1e4e8;
+        padding-left: 30px;
+        /* border-top: */
+        display: flex;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .resulted-user .profile-pic img
+    {
+        display: inline-block;
+        overflow: hidden;
+        line-height: 1;
+        vertical-align: middle;
+        border-radius: 3px;
+    }
+    .result-user-name
+    {
+        color: rgba(36, 41, 46, 0.85);
+        font-family: Whitney SemiBold;
+        font-size: 20px;
+        cursor: pointer;
+        display: inline-block;
+        /* float: right; */
+    }
+    .resulted-user .profile-pic
+    {
+        float: left;
+    }
+    .about_container
+    {
+        /* float: right; */
+        margin-left: 28px;
+       
+        min-height: 48px;
+        padding: 0;
+        font-size: 18px;
+        width:80%;
+        font-weight: 400;
+        line-height: 25px;
+    }
+    .result-about
+    {
+        margin-top:12px;
+        /* margin-bottom:10px; */
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: lighter;
+        font-family: Whitney Book;
+        color:rgba(88, 96, 105, 0.86);
+    }
+    .result-tags
+    {
+        position: relative;
+        user-select: none;
+        margin-top:4px;
+    }
+    .result-designation
+    {
+        display: inline-block;
+        position: relative;
+        /* margin-top:4px; */
+        margin-right: 12px;
+    }
+    .result-location
+    {
+        display: inline-block;
+        position: relative;
+        /* margin-top:4px; */
+    }
+    .designation-text
+    {
+        padding-left:20px;
+        color:rgba(88, 96, 105, 0.9) !important;   
+        font-size: 13px;
+        font-weight: lighter;
+        font-family: Whitney Book;
+        /* color:#586069; */
+        text-transform: capitalize;
+    }
+    .location-text
+    {
+        padding-left:16px;
+        color:rgba(88, 96, 105, 0.9) !important;   
+        font-size: 13px;
+        font-weight: lighter;
+        font-family: Whitney Book;
+        /* color:#586069; */
+        text-transform: capitalize;
+    
+    }
+    .tags-text
+    {
+        padding-left:20px;
+        color:rgba(88, 96, 105, 0.9) !important;   
+        font-size: 15px;
+        font-weight: lighter;
+        font-family: Whitney Book;
+        color:#586069;
+        text-transform: capitalize;
+    }
+    .tag
+    {
+        background-color: #72767d;
+        border-radius: 3px;
+        padding: .4em .5em;
+        transition: 0.25s ease;
+        text-transform: lowercase;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        font-size: 13px;
+        margin: 2px 4px 2px 0;
+        font-family: WhitneyMedium;
+        
+    }
+    .tag:hover {
+        background-color: #414348;
+    }
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    transition: 0.5s;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content form div
+{
+    display: flex;
+}
+.modal-content form div input
+{
+    font-size: 16px;
+    padding-left: 10px;
+    flex:1;
+    margin-bottom: 4px;
+}
+.modal-content form div label
+{
+    flex: 0.25;
+    padding:12px;
+}
+.col-md-12
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.col-md-4
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.col-md-4 form input.btn
+{
+    width: 210px !important;
+}
+.list-group-item
+{
+    display: block;
+}
+.lol .list-group-item
+{
+    padding-top:10px;
+}
+.container-footer a
+{
+    color:#7289DA;
+    margin-right: 16px;
+    font-size: 14px;
+}
+.container-footer a:hover
+{
+    text-decoration: underline;
+}
