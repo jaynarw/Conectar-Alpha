@@ -59,30 +59,46 @@
 		<a href="/"><img src="/images/logo.jpg" width="40px" height="40px" style="position: fixed;top:3px;left:calc(50% - 20px);"></a>
 	<div class="nav">
 		<div class="home-nav">
-		<span class="hint--bottom hint--rounded " aria-label="Home"><i class="material-icons">home</i></span>
+		<a href="/"><span class="hint--bottom hint--rounded " aria-label="Home"><i class="material-icons">home</i></span></a>
 		</div>
 			<div class="notification-nav">
 		<span class="hint--bottom hint--rounded " aria-label="You have no unread notifications."><i class="material-icons">notifications_none</i></span>
 	</div>
-	<div class="friend-nav">
-		<span class="hint--bottom hint--rounded " aria-label="Friend Requests"><i class="material-icons">people_outline</i></span>
+	<div class="dropdown" ng-class="{'friendpanel': friendrequestpanel}">
+		<span class="hint--bottom hint--rounded dropbtn" aria-label="Friend Requests" ng-click="friendrequestpanel=!friendrequestpanel"><i class="material-icons">people_outline</i></span>
+		<div class='beeper-nub'></div>
+		<div class="dropdown-content">
+			<div class="request">
+				<img src="/images/avatar.png" height="48px" width="48px"/>
+				<div class="request-details vbox">
+					<span class="request-title">Jayesh N</span>
+					<span class="request-tag"><span class="tag">Web Dev</span></span>
+				</div>
+				<div class="accept btn">Accept</div>
+			</div>
+		</div>
 	</div>
+	<a href="/chat">
 	<div class="chat-nav">
-			<span class="hint--bottom hint--rounded " aria-label="Chat"><i class="material-icons">chat</i></span>
+			<span class="hint--bottom hint--rounded " aria-label="Chat"><i class="material-icons">chat</i></span></a>
 	</div>
 
 	</div>
 	<div class="profile-input">
 		<div class="search">
-			<form class="search-form">
-				<input id="search-input" placeholder="Search" />
+			<form class="search-form" action="/user" method="get">
+				<input type="search" id="search-input" name="searchinput" placeholder="Search by Username" />
 				<span class="search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
     <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#7289DA"/>
     <path d="M0 0h24v24H0z" fill="none"/>
 </svg></span>
 			</form>
-			<div class="header-profile">
+			<div class="header-profile dropdown-logout" ng-class="{'logout': logout}" ng-click="logout=!logout">
 				<img src="/images/avatar.png" width="32px" height="32px" style="cursor:pointer;border-radius: 3px;">
+				<div class='beeper-nub'></div>
+				<div class="dropdown-content-logout">
+					<a href="/users/logout"><div class="request-title">Log out</div></a>
+				</div>
 			</div>
 		</div>
 	</div>

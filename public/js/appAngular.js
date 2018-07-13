@@ -7,10 +7,14 @@ app.config(function ($interpolateProvider) {
 app.controller('mainController',['$scope','$http',function($scope,$http){
 	// var myElement = angular.element( document.querySelector( '#title' ) );
 	var username;
+	$scope.requests=[];
+	$scope.people=[];
 	$http.get('/user.json').then(function(res) {
     username=res.data.username;
     run();
 });
+	$scope.friendrequestpanel=false;
+	$scope.logout=false;
 	function run(){
 	var socket=io.connect();
 	// console.log(#{username});
@@ -27,15 +31,16 @@ app.controller('mainController',['$scope','$http',function($scope,$http){
 	});
 	socket.emit('available friend request',username);
 	socket.on('got new friend requests',function(friend){
-		$scope.requests.push({friend});
+		$scope.requests.push(friend);
 		$scope.$apply();
 	});
 	socket.on('my friend request',function(friend){
-		$scope.requests.push({friend});
+		$scope.requests.push(friend);
+		console.log($scope.requests);
 		$scope.$apply();
 	});
 	socket.on('searched people',function(people){
-		$scope.people.push({people});
+		$scope.people.push(people);
 		$scope.$apply();
 	});
 	$scope.addtag=function(tag){
@@ -49,10 +54,11 @@ app.controller('mainController',['$scope','$http',function($scope,$http){
 	};
 	$scope.sendfriendrequest=function(friend){
 		socket.emit('friend request',username,friend);
+		console.log('sent Friend request to' + friend);
 	};
 	$scope.addfriend=function(friend){
 		socket.emit('add to friends',username,friend);
-		$scope.friends.push({friend});
+		$scope.friends.push(friend);
 		$scope.$apply();
 	};
 }

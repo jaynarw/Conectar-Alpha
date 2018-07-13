@@ -80,8 +80,19 @@ span.click( function() {
 			<div class="notification-nav">
 		<span class="hint--bottom hint--rounded " aria-label="You have no unread notifications."><i class="material-icons">notifications_none</i></span>
 	</div>
-	<div class="friend-nav">
-		<span class="hint--bottom hint--rounded " aria-label="Friend Requests"><i class="material-icons">people_outline</i></span>
+	<div class="dropdown" ng-class="{'friendpanel': friendrequestpanel}">
+		<span class="hint--bottom hint--rounded dropbtn" aria-label="Friend Requests" ng-click="friendrequestpanel=!friendrequestpanel"><i class="material-icons">people_outline</i></span>
+		<div class='beeper-nub'></div>
+		<div class="dropdown-content">
+			<div class="request">
+				<img src="/images/avatar.png" height="48px" width="48px"/>
+				<div class="request-details vbox">
+					<span class="request-title">Jayesh N</span>
+					<span class="request-tag"><span class="tag">Web Dev</span></span>
+				</div>
+				<div class="accept btn">Accept</div>
+			</div>
+		</div>
 	</div>
 	<a href="/chat">
 	<div class="chat-nav">
@@ -98,8 +109,12 @@ span.click( function() {
     <path d="M0 0h24v24H0z" fill="none"/>
 </svg></span>
 			</form>
-			<div class="header-profile">
+			<div class="header-profile dropdown-logout" ng-class="{'logout': logout}" ng-click="logout=!logout">
 				<img src="/images/avatar.png" width="32px" height="32px" style="cursor:pointer;border-radius: 3px;">
+				<div class='beeper-nub'></div>
+				<div class="dropdown-content-logout">
+					<a href="/users/logout"><div class="request-title">Log out</div></a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -123,6 +138,7 @@ span.click( function() {
 </svg><span class="about-text">{{mail}}</span></div><svg width="18" height="18">       
      <image xlink:href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/link.svg" src="yourfallback.png" width="18" height="18"/>    
 </svg><span class="about-text">{{phone}}</span></div>
+{{!-- [[requests]] --}}
 		<button id="myBtn" class="btn" style="width:80%">Edit Details</button>
 		<div class="col-md-3">
 				<div class="col-md-12" style="margin-top: 15px;padding:0">

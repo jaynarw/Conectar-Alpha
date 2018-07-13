@@ -2,7 +2,19 @@
 <html>
 <head>
   <title>{{username}}:{{query}}</title>
-  <link rel="shortcut icon" type="image/jpg" href="../images/logo.jpg">
+  <link rel="shortcut icon" type="image/png" href="images/logo.jpg">
+	<link rel="stylesheet" type="text/css" href="style/styling.css">
+	{{!-- <link rel="stylesheet" type="text/css" href="style/style.css"> --}}
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	    <script src="/js/scrollspy.js"></script>
+    <script src="/js/jquery.sticky.js"></script>
+	 
+	  
+	 
+	  <script src="/lib/angular-1.6.10/angular.js"></script>
+	  <script src="/js/appAngular.js"></script>
   <link rel="stylesheet" type="text/css" href="style/contact.css">
   <link rel="stylesheet" type="text/css" href="style/style.css">
   <link rel="stylesheet" type="text/css" href="style/dashboard.css">
@@ -15,33 +27,64 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
 </head>
 <body id="body1">
-<div class="contain">
-<div class="container">
-  <nav class="nav navbar-custom">
-    <div class="container-fluid" id="heading">
-      <div class="nav navbar-header">
-        <nav class="navbar-brand"><a href="/"><img src="../images/logo.jpg" style="height:70px;width:70px;border-radius: 0%;"></a></nav>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/team">Team</a></li>
-        <li><a href="/">Dashboard</a></li>
-        <li><a href="/about">About Conectar</a></li>
-        <li><a href="/contact" style="background: white;color: black;">Query</a></li>
-        <li><a href="/chat">Chat</a></li>
-        <li><a href="/users/logout">LogOut</a></li>
-      </ul>
-    </div>
-  </nav>
+<header class="nav-header">
+	<div class="container">
+		<a href="/"><img src="/images/logo.jpg" width="40px" height="40px" style="position: fixed;top:3px;left:calc(50% - 20px);"></a>
+	<div class="nav">
+		<div class="home-nav">
+		<a href="/"><span class="hint--bottom hint--rounded " aria-label="Home"><i class="material-icons">home</i></span></a>
+		</div>
+			<div class="notification-nav">
+		<span class="hint--bottom hint--rounded " aria-label="You have no unread notifications."><i class="material-icons">notifications_none</i></span>
+	</div>
+	<div class="dropdown" ng-class="{'friendpanel': friendrequestpanel}">
+		<span class="hint--bottom hint--rounded dropbtn" aria-label="Friend Requests" ng-click="friendrequestpanel=!friendrequestpanel"><i class="material-icons">people_outline</i></span>
+		<div class='beeper-nub'></div>
+		<div class="dropdown-content">
+			<div class="request">
+				<img src="/images/avatar.png" height="48px" width="48px"/>
+				<div class="request-details vbox">
+					<span class="request-title">Jayesh N</span>
+					<span class="request-tag"><span class="tag">Web Dev</span></span>
+				</div>
+				<div class="accept btn">Accept</div>
+			</div>
+		</div>
+	</div>
+	<a href="/chat">
+	<div class="chat-nav">
+			<span class="hint--bottom hint--rounded " aria-label="Chat"><i class="material-icons">chat</i></span></a>
+	</div>
+
+	</div>
+	<div class="profile-input">
+		<div class="search">
+			<form class="search-form" action="/user" method="get">
+				<input type="search" id="search-input" name="searchinput" placeholder="Search by Username" />
+				<span class="search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#7289DA"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg></span>
+			</form>
+			<div class="header-profile dropdown-logout" ng-class="{'logout': logout}" ng-click="logout=!logout">
+				<img src="/images/avatar.png" width="32px" height="32px" style="cursor:pointer;border-radius: 3px;">
+				<div class='beeper-nub'></div>
+				<div class="dropdown-content-logout">
+					<a href="/users/logout"><div class="request-title">Log out</div></a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-</div>
-  <div class="container">
+</header>
+  <div class="container" style="margin-top:76px">
     <h1 class="brand"><span>Conectar</span></h1>
     <div class="wrapper animated bounceInLeft">
       <div class="company-info">
         <h3>Query Form</h3>
         <ul>
-          <li><i class="fa fa-phone"></i> (+91)-9413605678</li>
-          <li><i class="fa fa-envelope"></i>conectar589@gmail.com</li>
+          <li style="display:block;font-size:17px;padding-top:16px;padding-bottom:16px"><i class="fa fa-phone"></i> (+91)-9413605678</li>
+          <li style="display:block;font-size:17px;"><i class="fa fa-envelope"></i>conectar589@gmail.com</li>
         </ul>
       </div>
       <div class="contact" name="contact">

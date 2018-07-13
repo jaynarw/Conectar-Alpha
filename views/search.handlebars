@@ -51,16 +51,28 @@
 		<a href="/"><img src="/images/logo.jpg" width="40px" height="40px" style="position: fixed;top:3px;left:calc(50% - 20px);"></a>
 	<div class="nav">
 		<div class="home-nav">
-		<a href="/"><span class="hint--bottom hint--rounded " aria-label="You have no unread notifications."><i class="material-icons">home</i></span></a>
+		<a href="/"><span class="hint--bottom hint--rounded " aria-label="Home"><i class="material-icons">home</i></span></a>
 		</div>
 			<div class="notification-nav">
 		<span class="hint--bottom hint--rounded " aria-label="You have no unread notifications."><i class="material-icons">notifications_none</i></span>
 	</div>
-	<div class="friend-nav">
-		<span class="hint--bottom hint--rounded " aria-label="Friend Requests"><i class="material-icons">people_outline</i></span>
+	<div class="dropdown" ng-class="{'friendpanel': friendrequestpanel}">
+		<span class="hint--bottom hint--rounded dropbtn" aria-label="Friend Requests" ng-click="friendrequestpanel=!friendrequestpanel"><i class="material-icons">people_outline</i></span>
+		<div class='beeper-nub'></div>
+		<div class="dropdown-content">
+			<div class="request">
+				<img src="/images/avatar.png" height="48px" width="48px"/>
+				<div class="request-details vbox">
+					<span class="request-title">Jayesh N</span>
+					<span class="request-tag"><span class="tag">Web Dev</span></span>
+				</div>
+				<div class="accept btn">Accept</div>
+			</div>
+		</div>
 	</div>
+	<a href="/chat">
 	<div class="chat-nav">
-			<span class="hint--bottom hint--rounded " aria-label="Chat"><i class="material-icons">chat</i></span>
+			<span class="hint--bottom hint--rounded " aria-label="Chat"><i class="material-icons">chat</i></span></a>
 	</div>
 
 	</div>
@@ -73,8 +85,12 @@
     <path d="M0 0h24v24H0z" fill="none"/>
 </svg></span>
 			</form>
-			<div class="header-profile">
+			<div class="header-profile dropdown-logout" ng-class="{'logout': logout}" ng-click="logout=!logout">
 				<img src="/images/avatar.png" width="32px" height="32px" style="cursor:pointer;border-radius: 3px;">
+				<div class='beeper-nub'></div>
+				<div class="dropdown-content-logout">
+					<a href="/users/logout"><div class="request-title">Log out</div></a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -90,7 +106,7 @@
 			<div class="profile-pic"><img src="images/avatar.png" width="80px" height="80px"></div>
 			<div class="about_container">
 				<div class="result-user-name">{{this.username}}</div>
-				<a href="/visit" style="float:right" class="btn" style="background: #82E0AA;color: white;">Connect</a>
+				<a href="" style="float:right" class="btn" style="background: #82E0AA;color: white;" ng-click="addfriend('{{this.username}}')">Connect</a>
 				<div class="result-tags"><span style="position:absolute;top:4px;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill="#586069" d="M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z"/></svg></span>
 					<span class="tags-text">{{#each this.tags}}<span class="tag">{{this}}</span>{{/each}}</span>
 				</div>

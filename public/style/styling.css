@@ -22,15 +22,15 @@
                 box-orient: vertical;
 
         /* current syntax */
-        display: -webkit-flex;
-        display:    -moz-flex;
-        display:     -ms-flex;
-        display:         flex;
+        display: -webkit-flex!important;
+        display:    -moz-flex!important;
+        display:     -ms-flex!important;
+        display:         flex!important;
 
-        -webkit-flex-direction: column;
-           -moz-flex-direction: column;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -webkit-flex-direction: column!important;
+           -moz-flex-direction: column!important;
+            -ms-flex-direction: column!important;
+                flex-direction: column!important;
       }
 .hbox {
         /* previous syntax */
@@ -705,4 +705,141 @@ li
 .container-footer a:hover
 {
     text-decoration: underline;
+}
+.dropbtn {
+    /* background-color: #4CAF50; */
+    /* color: white; */
+    /* padding: 16px; */
+    /* font-size: 16px; */
+    /* border: none; */
+}
+
+.dropdown {
+    position: relative;
+    /* display: inline-block; */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /* background-color: #f1f1f1; */
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+}
+.dropdown .dropdown-content .request {
+
+    display: none;
+    margin:0;
+    padding: 10px;
+}
+
+.dropdown.friendpanel .dropdown-content .request {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+}
+
+/* .dropdown-content a:hover {background-color: #ddd;} */
+
+.dropdown.friendpanel .dropdown-content {
+    display: block;
+    left:-24px;
+    top:26px;
+    /* background-color: whitesmoke; */
+    background: #fff;
+    border: 1px solid rgba(100, 100, 100, .4);
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    color: #1d2129;
+    overflow: visible;
+    /* position: absolute; */
+    /* top: 38px; */
+    width: 430px;
+    /* z-index: -1; */
+}
+.beeper-nub
+{
+    display: none;
+    position: absolute;
+    background-image: url("beeper.png");
+    
+}
+.dropdown.friendpanel .beeper-nub
+{
+    min-height: 30px;
+    min-width: 30px;
+    display: block;
+    left:-16px;
+    z-index: 1;
+    top:12px;
+}
+.request-title
+{
+    font-family: Whitney SemiBold;
+    flex:1;
+    font-size 16px;
+}
+.request-tag
+{
+    /* flex:1; */
+    margin-top:8px;
+    margin-bottom:4px;
+}
+.request-details
+{
+    flex: 1;
+    margin: 0!important;
+    text-align: left;
+}
+
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;}
+.request img
+{
+    position: absolute;
+
+} */
+.request img
+{
+    margin-right: 24px;
+}
+.accept
+{
+    float: right;
+    margin:0!important;
+}
+.dropdown-logout {
+    position: relative;
+}
+
+.dropdown-content-logout {
+    display: none;
+    position: absolute;
+}
+
+.dropdown-logout.logout .dropdown-content-logout {
+    display: block;
+    left:-66px;
+    top:42px;
+    min-height:24px;
+    width:100px;
+    /* background-color: whitesmoke; */
+    background: #fff;
+    border: 1px solid rgba(100, 100, 100, .4);
+    border-radius: 3px;
+    z-index: 99;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    color: #1d2129;
+    overflow: visible;
+}
+
+.dropdown-logout.logout .beeper-nub
+{
+    min-height: 30px;
+    min-width: 30px;
+    display: block;
+    /* left:-16px; */
+    z-index: 1;
+    top:30px;
 }
